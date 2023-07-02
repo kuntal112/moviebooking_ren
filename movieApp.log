@@ -783,3 +783,387 @@ com.mongodb.MongoCommandException: Command failed with error 8000 (AtlasError): 
 2023-07-02 12:32:00.436  INFO 15604 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2023-07-02 12:32:00.441  INFO 15604 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
 2023-07-02 12:32:01.837  INFO 15604 --- [http-nio-8082-exec-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:28, serverValue:340264}] to ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017
+2023-07-02 13:30:21.978  INFO 15604 --- [cluster-ClusterId{value='64a120dcbca6e15b07c53985', description='null'}-ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017
+
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:696) ~[mongodb-driver-core-4.6.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:574) ~[mongodb-driver-core-4.6.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:410) ~[mongodb-driver-core-4.6.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:369) ~[mongodb-driver-core-4.6.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:221) ~[mongodb-driver-core-4.6.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:157) ~[mongodb-driver-core-4.6.1.jar:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:283) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:309) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:478) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:472) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1460) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1064) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:110) ~[mongodb-driver-core-4.6.1.jar:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:135) ~[mongodb-driver-core-4.6.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:713) ~[mongodb-driver-core-4.6.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:571) ~[mongodb-driver-core-4.6.1.jar:na]
+	... 5 common frames omitted
+
+2023-07-02 13:30:27.657  INFO 15604 --- [cluster-ClusterId{value='64a120dcbca6e15b07c53985', description='null'}-ac-uy0ozxy-shard-00-02.ytsaux4.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-uy0ozxy-shard-00-02.ytsaux4.mongodb.net:27017
+
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:696) ~[mongodb-driver-core-4.6.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:574) ~[mongodb-driver-core-4.6.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:410) ~[mongodb-driver-core-4.6.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:369) ~[mongodb-driver-core-4.6.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:221) ~[mongodb-driver-core-4.6.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:157) ~[mongodb-driver-core-4.6.1.jar:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:283) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:309) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:478) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:472) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1460) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1064) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:110) ~[mongodb-driver-core-4.6.1.jar:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:135) ~[mongodb-driver-core-4.6.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:713) ~[mongodb-driver-core-4.6.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:571) ~[mongodb-driver-core-4.6.1.jar:na]
+	... 5 common frames omitted
+
+2023-07-02 13:30:27.661  INFO 15604 --- [cluster-ClusterId{value='64a120dcbca6e15b07c53985', description='null'}-ac-uy0ozxy-shard-00-00.ytsaux4.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-uy0ozxy-shard-00-00.ytsaux4.mongodb.net:27017
+
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:696) ~[mongodb-driver-core-4.6.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:574) ~[mongodb-driver-core-4.6.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:410) ~[mongodb-driver-core-4.6.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:369) ~[mongodb-driver-core-4.6.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:221) ~[mongodb-driver-core-4.6.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:157) ~[mongodb-driver-core-4.6.1.jar:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:283) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:309) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:478) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:472) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1460) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1064) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:110) ~[mongodb-driver-core-4.6.1.jar:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:135) ~[mongodb-driver-core-4.6.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:713) ~[mongodb-driver-core-4.6.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:571) ~[mongodb-driver-core-4.6.1.jar:na]
+	... 5 common frames omitted
+
+2023-07-02 13:30:27.954  INFO 15604 --- [cluster-ClusterId{value='64a120dcbca6e15b07c53985', description='null'}-ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:29, serverValue:341525}] to ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017
+2023-07-02 13:30:27.955  INFO 15604 --- [cluster-ClusterId{value='64a120dcbca6e15b07c53985', description='null'}-ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=542753600, setName='atlas-dbsduu-shard-0', canonicalAddress=ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017, hosts=[ac-uy0ozxy-shard-00-00.ytsaux4.mongodb.net:27017, ac-uy0ozxy-shard-00-02.ytsaux4.mongodb.net:27017, ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017], passives=[], arbiters=[], primary='ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff00000000000000a6, setVersion=7, topologyVersion=TopologyVersion{processId=6493b264c40a4c3bbb842305, counter=6}, lastWriteDate=Sun Jul 02 13:30:26 IST 2023, lastUpdateTimeNanos=74722069516600}
+2023-07-02 13:30:27.956  INFO 15604 --- [cluster-ClusterId{value='64a120dcbca6e15b07c53985', description='null'}-ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017] org.mongodb.driver.cluster               : Discovered replica set primary ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017
+2023-07-02 13:30:28.517  INFO 15604 --- [cluster-ClusterId{value='64a120dcbca6e15b07c53985', description='null'}-ac-uy0ozxy-shard-00-00.ytsaux4.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:31, serverValue:331346}] to ac-uy0ozxy-shard-00-00.ytsaux4.mongodb.net:27017
+2023-07-02 13:30:28.518  INFO 15604 --- [cluster-ClusterId{value='64a120dcbca6e15b07c53985', description='null'}-ac-uy0ozxy-shard-00-00.ytsaux4.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-uy0ozxy-shard-00-00.ytsaux4.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=535185400, setName='atlas-dbsduu-shard-0', canonicalAddress=ac-uy0ozxy-shard-00-00.ytsaux4.mongodb.net:27017, hosts=[ac-uy0ozxy-shard-00-00.ytsaux4.mongodb.net:27017, ac-uy0ozxy-shard-00-02.ytsaux4.mongodb.net:27017, ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017], passives=[], arbiters=[], primary='ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=7, topologyVersion=TopologyVersion{processId=6493b153637504370b7534cf, counter=4}, lastWriteDate=Sun Jul 02 13:30:27 IST 2023, lastUpdateTimeNanos=74722633618600}
+2023-07-02 13:30:28.587  INFO 15604 --- [cluster-ClusterId{value='64a120dcbca6e15b07c53985', description='null'}-ac-uy0ozxy-shard-00-02.ytsaux4.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:30, serverValue:329651}] to ac-uy0ozxy-shard-00-02.ytsaux4.mongodb.net:27017
+2023-07-02 13:30:28.587  INFO 15604 --- [cluster-ClusterId{value='64a120dcbca6e15b07c53985', description='null'}-ac-uy0ozxy-shard-00-02.ytsaux4.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-uy0ozxy-shard-00-02.ytsaux4.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=592023400, setName='atlas-dbsduu-shard-0', canonicalAddress=ac-uy0ozxy-shard-00-02.ytsaux4.mongodb.net:27017, hosts=[ac-uy0ozxy-shard-00-00.ytsaux4.mongodb.net:27017, ac-uy0ozxy-shard-00-02.ytsaux4.mongodb.net:27017, ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017], passives=[], arbiters=[], primary='ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=7, topologyVersion=TopologyVersion{processId=6493b36415beaf5d9c3c3666, counter=3}, lastWriteDate=Sun Jul 02 13:30:27 IST 2023, lastUpdateTimeNanos=74722702379400}
+2023-07-02 13:30:48.185  INFO 15604 --- [cluster-rtt-ClusterId{value='64a120dcbca6e15b07c53985', description='null'}-ac-uy0ozxy-shard-00-02.ytsaux4.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:32, serverValue:329645}] to ac-uy0ozxy-shard-00-02.ytsaux4.mongodb.net:27017
+2023-07-02 13:30:48.185  INFO 15604 --- [cluster-rtt-ClusterId{value='64a120dcbca6e15b07c53985', description='null'}-ac-uy0ozxy-shard-00-00.ytsaux4.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:33, serverValue:331350}] to ac-uy0ozxy-shard-00-00.ytsaux4.mongodb.net:27017
+2023-07-02 13:30:48.185  INFO 15604 --- [cluster-rtt-ClusterId{value='64a120dcbca6e15b07c53985', description='null'}-ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:34, serverValue:341529}] to ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017
+2023-07-02 13:43:03.079  INFO 15604 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 33 class path changes (0 additions, 33 deletions, 0 modifications)
+2023-07-02 13:43:03.236  INFO 15604 --- [Thread-16] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-02 13:43:03.239  INFO 15604 --- [Thread-16] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-07-02 13:43:03.396  WARN 15604 --- [Thread-16] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [cluster-ClusterId{value='64a120dcbca6e15b07c53985', description='null'}-ac-uy0ozxy-shard-00-02.ytsaux4.mongodb.net:27017] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.5/sun.nio.ch.Net.poll(Native Method)
+ java.base@17.0.5/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:181)
+ java.base@17.0.5/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:285)
+ java.base@17.0.5/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:309)
+ java.base@17.0.5/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+ java.base@17.0.5/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+ java.base@17.0.5/java.net.Socket$SocketInputStream.read(Socket.java:966)
+ java.base@17.0.5/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:478)
+ java.base@17.0.5/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:472)
+ java.base@17.0.5/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+ java.base@17.0.5/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1460)
+ java.base@17.0.5/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1064)
+ app//com.mongodb.internal.connection.SocketStream.read(SocketStream.java:110)
+ app//com.mongodb.internal.connection.SocketStream.read(SocketStream.java:135)
+ app//com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:713)
+ app//com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:571)
+ app//com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:410)
+ app//com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:369)
+ app//com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:221)
+ app//com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:157)
+ java.base@17.0.5/java.lang.Thread.run(Thread.java:833)
+2023-07-02 13:43:03.413  WARN 15604 --- [Thread-16] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [cluster-rtt-ClusterId{value='64a120dcbca6e15b07c53985', description='null'}-ac-uy0ozxy-shard-00-02.ytsaux4.mongodb.net:27017] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.5/java.lang.Thread.sleep(Native Method)
+ app//com.mongodb.internal.connection.DefaultServerMonitor.waitForNext(DefaultServerMonitor.java:443)
+ app//com.mongodb.internal.connection.DefaultServerMonitor.access$1500(DefaultServerMonitor.java:64)
+ app//com.mongodb.internal.connection.DefaultServerMonitor$RoundTripTimeRunnable.run(DefaultServerMonitor.java:415)
+ java.base@17.0.5/java.lang.Thread.run(Thread.java:833)
+2023-07-02 13:43:03.414  WARN 15604 --- [Thread-16] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [cluster-ClusterId{value='64a120dcbca6e15b07c53985', description='null'}-ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.5/sun.nio.ch.Net.poll(Native Method)
+ java.base@17.0.5/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:181)
+ java.base@17.0.5/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:285)
+ java.base@17.0.5/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:309)
+ java.base@17.0.5/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+ java.base@17.0.5/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+ java.base@17.0.5/java.net.Socket$SocketInputStream.read(Socket.java:966)
+ java.base@17.0.5/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:478)
+ java.base@17.0.5/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:472)
+ java.base@17.0.5/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+ java.base@17.0.5/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1460)
+ java.base@17.0.5/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1064)
+ app//com.mongodb.internal.connection.SocketStream.read(SocketStream.java:110)
+ app//com.mongodb.internal.connection.SocketStream.read(SocketStream.java:135)
+ app//com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:713)
+ app//com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:571)
+ app//com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:410)
+ app//com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:369)
+ app//com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:221)
+ app//com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:157)
+ java.base@17.0.5/java.lang.Thread.run(Thread.java:833)
+2023-07-02 13:43:03.415  WARN 15604 --- [Thread-16] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [cluster-rtt-ClusterId{value='64a120dcbca6e15b07c53985', description='null'}-ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.5/java.lang.Thread.sleep(Native Method)
+ app//com.mongodb.internal.connection.DefaultServerMonitor.waitForNext(DefaultServerMonitor.java:443)
+ app//com.mongodb.internal.connection.DefaultServerMonitor.access$1500(DefaultServerMonitor.java:64)
+ app//com.mongodb.internal.connection.DefaultServerMonitor$RoundTripTimeRunnable.run(DefaultServerMonitor.java:415)
+ java.base@17.0.5/java.lang.Thread.run(Thread.java:833)
+2023-07-02 13:43:03.416  WARN 15604 --- [Thread-16] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [cluster-ClusterId{value='64a120dcbca6e15b07c53985', description='null'}-ac-uy0ozxy-shard-00-00.ytsaux4.mongodb.net:27017] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.5/sun.nio.ch.Net.poll(Native Method)
+ java.base@17.0.5/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:181)
+ java.base@17.0.5/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:285)
+ java.base@17.0.5/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:309)
+ java.base@17.0.5/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+ java.base@17.0.5/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+ java.base@17.0.5/java.net.Socket$SocketInputStream.read(Socket.java:966)
+ java.base@17.0.5/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:478)
+ java.base@17.0.5/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:472)
+ java.base@17.0.5/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+ java.base@17.0.5/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1460)
+ java.base@17.0.5/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1064)
+ app//com.mongodb.internal.connection.SocketStream.read(SocketStream.java:110)
+ app//com.mongodb.internal.connection.SocketStream.read(SocketStream.java:135)
+ app//com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:713)
+ app//com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:571)
+ app//com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:410)
+ app//com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:369)
+ app//com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:221)
+ app//com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:157)
+ java.base@17.0.5/java.lang.Thread.run(Thread.java:833)
+2023-07-02 13:43:03.416  WARN 15604 --- [Thread-16] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [cluster-rtt-ClusterId{value='64a120dcbca6e15b07c53985', description='null'}-ac-uy0ozxy-shard-00-00.ytsaux4.mongodb.net:27017] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.5/java.lang.Thread.sleep(Native Method)
+ app//com.mongodb.internal.connection.DefaultServerMonitor.waitForNext(DefaultServerMonitor.java:443)
+ app//com.mongodb.internal.connection.DefaultServerMonitor.access$1500(DefaultServerMonitor.java:64)
+ app//com.mongodb.internal.connection.DefaultServerMonitor$RoundTripTimeRunnable.run(DefaultServerMonitor.java:415)
+ java.base@17.0.5/java.lang.Thread.run(Thread.java:833)
+2023-07-02 13:43:03.417  WARN 15604 --- [Thread-16] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [MaintenanceTimer-12-thread-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.5/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.5/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.5/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.5/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.5/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.5/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.5/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.5/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.5/java.lang.Thread.run(Thread.java:833)
+2023-07-02 13:43:03.418  WARN 15604 --- [Thread-16] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [MaintenanceTimer-11-thread-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.5/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.5/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.5/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.5/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.5/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.5/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.5/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.5/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.5/java.lang.Thread.run(Thread.java:833)
+2023-07-02 13:43:03.419  WARN 15604 --- [Thread-16] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [MaintenanceTimer-13-thread-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.5/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.5/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.5/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.5/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.5/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.5/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.5/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.5/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.5/java.lang.Thread.run(Thread.java:833)
+2023-07-02 13:43:05.240  INFO 15604 --- [Thread-16] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:35, serverValue:341742}] to ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017
+2023-07-02 13:43:06.426  INFO 15604 --- [restartedMain] com.fse1.movieapp.MovieappApplication    : Starting MovieappApplication using Java 17.0.5 on DESKTOP-Q1IBIS3 with PID 15604 (C:\Users\bittu\Desktop\movieapp (2)\target\classes started by bittu in C:\Users\bittu\Desktop\movieapp (2))
+2023-07-02 13:43:06.427 DEBUG 15604 --- [restartedMain] com.fse1.movieapp.MovieappApplication    : Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-07-02 13:43:06.427  INFO 15604 --- [restartedMain] com.fse1.movieapp.MovieappApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-07-02 13:43:07.527  INFO 15604 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-07-02 13:43:07.528  INFO 15604 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 MongoDB repository interfaces.
+2023-07-02 13:43:07.847  INFO 15604 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-07-02 13:43:07.848  INFO 15604 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-02 13:43:07.848  INFO 15604 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-07-02 13:43:07.885  INFO 15604 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-02 13:43:07.885  INFO 15604 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1454 ms
+2023-07-02 13:43:07.927  WARN 15604 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'movieappApplication': Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.fse1.movieapp.MovieappApplication] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@2f333739]
+2023-07-02 13:43:07.927  INFO 15604 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-02 13:43:07.937  INFO 15604 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-07-02 13:43:07.978 ERROR 15604 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'movieappApplication': Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.fse1.movieapp.MovieappApplication] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@2f333739]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597) ~[spring-beans-5.3.26.jar:5.3.26]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.26.jar:5.3.26]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.26.jar:5.3.26]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.26.jar:5.3.26]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.26.jar:5.3.26]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.26.jar:5.3.26]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.26.jar:5.3.26]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920) ~[spring-context-5.3.26.jar:5.3.26]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.26.jar:5.3.26]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.10.jar:2.7.10]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.10.jar:2.7.10]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.10.jar:2.7.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.10.jar:2.7.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.10.jar:2.7.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.10.jar:2.7.10]
+	at com.fse1.movieapp.MovieappApplication.main(MovieappApplication.java:30) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.10.jar:2.7.10]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.fse1.movieapp.MovieappApplication] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@2f333739]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:743) ~[spring-core-5.3.26.jar:5.3.26]
+	at org.springframework.util.ReflectionUtils.doWithLocalFields(ReflectionUtils.java:675) ~[spring-core-5.3.26.jar:5.3.26]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.buildResourceMetadata(CommonAnnotationBeanPostProcessor.java:377) ~[spring-context-5.3.26.jar:5.3.26]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.findResourceMetadata(CommonAnnotationBeanPostProcessor.java:358) ~[spring-context-5.3.26.jar:5.3.26]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(CommonAnnotationBeanPostProcessor.java:306) ~[spring-context-5.3.26.jar:5.3.26]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1116) ~[spring-beans-5.3.26.jar:5.3.26]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.3.26.jar:5.3.26]
+	... 20 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/fse1/movieapp/repository/MovieRepository
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3297) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2371) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:738) ~[spring-core-5.3.26.jar:5.3.26]
+	... 26 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.fse1.movieapp.repository.MovieRepository
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
+	... 30 common frames omitted
+
+2023-07-02 13:43:09.415  INFO 15604 --- [restartedMain] com.fse1.movieapp.MovieappApplication    : Starting MovieappApplication using Java 17.0.5 on DESKTOP-Q1IBIS3 with PID 15604 (C:\Users\bittu\Desktop\movieapp (2)\target\classes started by bittu in C:\Users\bittu\Desktop\movieapp (2))
+2023-07-02 13:43:09.415 DEBUG 15604 --- [restartedMain] com.fse1.movieapp.MovieappApplication    : Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-07-02 13:43:09.415  INFO 15604 --- [restartedMain] com.fse1.movieapp.MovieappApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-07-02 13:43:09.650  INFO 15604 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-07-02 13:43:09.651  INFO 15604 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 MongoDB repository interfaces.
+2023-07-02 13:43:09.750  INFO 15604 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-07-02 13:43:09.751  INFO 15604 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-02 13:43:09.751  INFO 15604 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-07-02 13:43:09.819  INFO 15604 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-07-02 13:43:09.819  INFO 15604 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 403 ms
+2023-07-02 13:43:09.853  WARN 15604 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'movieappApplication': Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.fse1.movieapp.MovieappApplication] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@2f333739]
+2023-07-02 13:43:09.853  INFO 15604 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-02 13:43:09.861  INFO 15604 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-07-02 13:43:09.866 ERROR 15604 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'movieappApplication': Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.fse1.movieapp.MovieappApplication] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@2f333739]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597) ~[spring-beans-5.3.26.jar:5.3.26]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.26.jar:5.3.26]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.26.jar:5.3.26]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.26.jar:5.3.26]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.26.jar:5.3.26]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.26.jar:5.3.26]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.26.jar:5.3.26]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920) ~[spring-context-5.3.26.jar:5.3.26]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.26.jar:5.3.26]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.10.jar:2.7.10]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.10.jar:2.7.10]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.10.jar:2.7.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.10.jar:2.7.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.10.jar:2.7.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.10.jar:2.7.10]
+	at com.fse1.movieapp.MovieappApplication.main(MovieappApplication.java:30) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.10.jar:2.7.10]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.fse1.movieapp.MovieappApplication] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@2f333739]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:743) ~[spring-core-5.3.26.jar:5.3.26]
+	at org.springframework.util.ReflectionUtils.doWithLocalFields(ReflectionUtils.java:675) ~[spring-core-5.3.26.jar:5.3.26]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.buildResourceMetadata(CommonAnnotationBeanPostProcessor.java:377) ~[spring-context-5.3.26.jar:5.3.26]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.findResourceMetadata(CommonAnnotationBeanPostProcessor.java:358) ~[spring-context-5.3.26.jar:5.3.26]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(CommonAnnotationBeanPostProcessor.java:306) ~[spring-context-5.3.26.jar:5.3.26]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1116) ~[spring-beans-5.3.26.jar:5.3.26]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.3.26.jar:5.3.26]
+	... 20 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/fse1/movieapp/repository/MovieRepository
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3297) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2371) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:738) ~[spring-core-5.3.26.jar:5.3.26]
+	... 26 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.fse1.movieapp.repository.MovieRepository
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
+	... 30 common frames omitted
+
+2023-07-02 13:44:08.341  INFO 18852 --- [main] c.f.movieapp.MovieappApplicationTests    : Starting MovieappApplicationTests using Java 17.0.5 on DESKTOP-Q1IBIS3 with PID 18852 (started by bittu in C:\Users\bittu\Desktop\movieapp (2))
+2023-07-02 13:44:08.345 DEBUG 18852 --- [main] c.f.movieapp.MovieappApplicationTests    : Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-07-02 13:44:08.346  INFO 18852 --- [main] c.f.movieapp.MovieappApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2023-07-02 13:44:09.724  INFO 18852 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-07-02 13:44:10.119  INFO 18852 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 390 ms. Found 4 MongoDB repository interfaces.
+2023-07-02 13:44:12.569  INFO 18852 --- [cluster-ClusterId{value='64a131d495d4c95ad011e2c4', description='null'}-srv-cluster0.ytsaux4.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server ac-uy0ozxy-shard-00-02.ytsaux4.mongodb.net:27017 to client view of cluster
+2023-07-02 13:44:12.600  INFO 18852 --- [main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Eclipse Adoptium/17.0.5+8"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='kuntaldas112', source='admin', password=<hidden>, mechanismProperties=<hidden>}, streamFactoryFactory=null, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@13278a41], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@4a31ed12]}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=cluster0.ytsaux4.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-dbsduu-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@3ab595c8], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2023-07-02 13:44:12.632  INFO 18852 --- [cluster-ClusterId{value='64a131d495d4c95ad011e2c4', description='null'}-srv-cluster0.ytsaux4.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017 to client view of cluster
+2023-07-02 13:44:12.634  INFO 18852 --- [cluster-ClusterId{value='64a131d495d4c95ad011e2c4', description='null'}-srv-cluster0.ytsaux4.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server ac-uy0ozxy-shard-00-00.ytsaux4.mongodb.net:27017 to client view of cluster
+2023-07-02 13:44:14.848  INFO 18852 --- [cluster-ClusterId{value='64a131d495d4c95ad011e2c4', description='null'}-ac-uy0ozxy-shard-00-00.ytsaux4.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:331615}] to ac-uy0ozxy-shard-00-00.ytsaux4.mongodb.net:27017
+2023-07-02 13:44:14.848  INFO 18852 --- [cluster-ClusterId{value='64a131d495d4c95ad011e2c4', description='null'}-ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:5, serverValue:341785}] to ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017
+2023-07-02 13:44:14.848  INFO 18852 --- [cluster-rtt-ClusterId{value='64a131d495d4c95ad011e2c4', description='null'}-ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:4, serverValue:341586}] to ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017
+2023-07-02 13:44:14.848  INFO 18852 --- [cluster-rtt-ClusterId{value='64a131d495d4c95ad011e2c4', description='null'}-ac-uy0ozxy-shard-00-00.ytsaux4.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:6, serverValue:331615}] to ac-uy0ozxy-shard-00-00.ytsaux4.mongodb.net:27017
+2023-07-02 13:44:14.848  INFO 18852 --- [cluster-rtt-ClusterId{value='64a131d495d4c95ad011e2c4', description='null'}-ac-uy0ozxy-shard-00-02.ytsaux4.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:329919}] to ac-uy0ozxy-shard-00-02.ytsaux4.mongodb.net:27017
+2023-07-02 13:44:14.849  INFO 18852 --- [cluster-ClusterId{value='64a131d495d4c95ad011e2c4', description='null'}-ac-uy0ozxy-shard-00-02.ytsaux4.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:329919}] to ac-uy0ozxy-shard-00-02.ytsaux4.mongodb.net:27017
+2023-07-02 13:44:14.849  INFO 18852 --- [cluster-ClusterId{value='64a131d495d4c95ad011e2c4', description='null'}-ac-uy0ozxy-shard-00-00.ytsaux4.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-uy0ozxy-shard-00-00.ytsaux4.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1245706800, setName='atlas-dbsduu-shard-0', canonicalAddress=ac-uy0ozxy-shard-00-00.ytsaux4.mongodb.net:27017, hosts=[ac-uy0ozxy-shard-00-00.ytsaux4.mongodb.net:27017, ac-uy0ozxy-shard-00-02.ytsaux4.mongodb.net:27017, ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017], passives=[], arbiters=[], primary='ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=7, topologyVersion=TopologyVersion{processId=6493b153637504370b7534cf, counter=4}, lastWriteDate=Sun Jul 02 13:44:13 IST 2023, lastUpdateTimeNanos=75548960862300}
+2023-07-02 13:44:14.849  INFO 18852 --- [cluster-ClusterId{value='64a131d495d4c95ad011e2c4', description='null'}-ac-uy0ozxy-shard-00-02.ytsaux4.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-uy0ozxy-shard-00-02.ytsaux4.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1147115200, setName='atlas-dbsduu-shard-0', canonicalAddress=ac-uy0ozxy-shard-00-02.ytsaux4.mongodb.net:27017, hosts=[ac-uy0ozxy-shard-00-00.ytsaux4.mongodb.net:27017, ac-uy0ozxy-shard-00-02.ytsaux4.mongodb.net:27017, ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017], passives=[], arbiters=[], primary='ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=7, topologyVersion=TopologyVersion{processId=6493b36415beaf5d9c3c3666, counter=3}, lastWriteDate=Sun Jul 02 13:44:13 IST 2023, lastUpdateTimeNanos=75548960862300}
+2023-07-02 13:44:14.849  INFO 18852 --- [cluster-ClusterId{value='64a131d495d4c95ad011e2c4', description='null'}-ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1232270600, setName='atlas-dbsduu-shard-0', canonicalAddress=ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017, hosts=[ac-uy0ozxy-shard-00-00.ytsaux4.mongodb.net:27017, ac-uy0ozxy-shard-00-02.ytsaux4.mongodb.net:27017, ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017], passives=[], arbiters=[], primary='ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff00000000000000a6, setVersion=7, topologyVersion=TopologyVersion{processId=6493b264c40a4c3bbb842305, counter=6}, lastWriteDate=Sun Jul 02 13:44:13 IST 2023, lastUpdateTimeNanos=75548961057200}
+2023-07-02 13:44:14.857  INFO 18852 --- [cluster-ClusterId{value='64a131d495d4c95ad011e2c4', description='null'}-ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017] org.mongodb.driver.cluster               : Setting max election id to 7fffffff00000000000000a6 from replica set primary ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017
+2023-07-02 13:44:14.858  INFO 18852 --- [cluster-ClusterId{value='64a131d495d4c95ad011e2c4', description='null'}-ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017] org.mongodb.driver.cluster               : Setting max set version to 7 from replica set primary ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017
+2023-07-02 13:44:14.859  INFO 18852 --- [cluster-ClusterId{value='64a131d495d4c95ad011e2c4', description='null'}-ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017] org.mongodb.driver.cluster               : Discovered replica set primary ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017
+2023-07-02 13:44:18.262  INFO 18852 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2023-07-02 13:44:18.378  INFO 18852 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@194e78af, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4fe4503a, org.springframework.security.web.context.SecurityContextPersistenceFilter@ff4b223, org.springframework.security.web.header.HeaderWriterFilter@61c87f1b, org.springframework.web.filter.CorsFilter@669580e2, org.springframework.security.web.authentication.logout.LogoutFilter@28b5662d, com.fse1.movieapp.security.jwt.AuthTokenFilter@5d22ed6c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@687b0ddc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@42b4df5a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@37c37d67, org.springframework.security.web.session.SessionManagementFilter@18bb1b88, org.springframework.security.web.access.ExceptionTranslationFilter@4809c771, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@626df173]
+2023-07-02 13:44:21.614  INFO 18852 --- [main] c.f.movieapp.MovieappApplicationTests    : Started MovieappApplicationTests in 13.736 seconds (JVM running for 16.376)
+2023-07-02 13:44:23.542  INFO 18852 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.fse1.movieapp.security.services.MovieServiceTest], using SpringBootContextLoader
+2023-07-02 13:44:23.544  INFO 18852 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.fse1.movieapp.security.services.MovieServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-07-02 13:44:23.546  INFO 18852 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.fse1.movieapp.security.services.MovieServiceTest]: MovieServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-07-02 13:44:23.608  INFO 18852 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.fse1.movieapp.MovieappApplication for test class com.fse1.movieapp.security.services.MovieServiceTest
+2023-07-02 13:44:23.613  INFO 18852 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+2023-07-02 13:44:23.617  INFO 18852 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3183a37c, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@31a80c88, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7602c65d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5a5c2889, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7668f8fd, org.springframework.test.context.support.DirtiesContextTestExecutionListener@75566f4, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6785786d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5c261c74, org.springframework.test.context.event.EventPublishingTestExecutionListener@6d38a81d, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@41f61188, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@d7c4fcb, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@61d527ac, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@498503cb, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@380e3122, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@576323ff, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1fc386f8, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@7eb94590]
+2023-07-02 13:44:23.657  INFO 18852 --- [main] m.p.springdotenv.DotenvPropertySource    : Initialized Dotenv with DotenvConfig{directory=null, filename=null, ignoreIfMalformed=false, ignoreIfMissing=true, systemProperties=false, prefix=null}
+2023-07-02 13:44:23.707  INFO 18852 --- [main] c.f.m.s.services.MovieServiceTest        : Starting MovieServiceTest using Java 17.0.5 on DESKTOP-Q1IBIS3 with PID 18852 (started by bittu in C:\Users\bittu\Desktop\movieapp (2))
+2023-07-02 13:44:23.707 DEBUG 18852 --- [main] c.f.m.s.services.MovieServiceTest        : Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-07-02 13:44:23.708  INFO 18852 --- [main] c.f.m.s.services.MovieServiceTest        : The following 1 profile is active: "test"
+2023-07-02 13:44:24.251  INFO 18852 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-07-02 13:44:24.340  INFO 18852 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86 ms. Found 4 MongoDB repository interfaces.
+2023-07-02 13:44:25.899  INFO 18852 --- [main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Eclipse Adoptium/17.0.5+8"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='kuntaldas112', source='admin', password=<hidden>, mechanismProperties=<hidden>}, streamFactoryFactory=null, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@27caa186], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@4a31ed12]}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=cluster0.ytsaux4.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-dbsduu-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@6ebf9c2d], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2023-07-02 13:44:25.913  INFO 18852 --- [cluster-ClusterId{value='64a131e195d4c95ad011e2c5', description='null'}-srv-cluster0.ytsaux4.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server ac-uy0ozxy-shard-00-02.ytsaux4.mongodb.net:27017 to client view of cluster
+2023-07-02 13:44:25.915  INFO 18852 --- [cluster-ClusterId{value='64a131e195d4c95ad011e2c5', description='null'}-srv-cluster0.ytsaux4.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017 to client view of cluster
+2023-07-02 13:44:25.916  INFO 18852 --- [cluster-ClusterId{value='64a131e195d4c95ad011e2c5', description='null'}-srv-cluster0.ytsaux4.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server ac-uy0ozxy-shard-00-00.ytsaux4.mongodb.net:27017 to client view of cluster
+2023-07-02 13:44:26.654  INFO 18852 --- [cluster-ClusterId{value='64a131e195d4c95ad011e2c5', description='null'}-ac-uy0ozxy-shard-00-00.ytsaux4.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:9, serverValue:331612}] to ac-uy0ozxy-shard-00-00.ytsaux4.mongodb.net:27017
+2023-07-02 13:44:26.655  INFO 18852 --- [cluster-ClusterId{value='64a131e195d4c95ad011e2c5', description='null'}-ac-uy0ozxy-shard-00-00.ytsaux4.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-uy0ozxy-shard-00-00.ytsaux4.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=493598600, setName='atlas-dbsduu-shard-0', canonicalAddress=ac-uy0ozxy-shard-00-00.ytsaux4.mongodb.net:27017, hosts=[ac-uy0ozxy-shard-00-00.ytsaux4.mongodb.net:27017, ac-uy0ozxy-shard-00-02.ytsaux4.mongodb.net:27017, ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017], passives=[], arbiters=[], primary='ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=7, topologyVersion=TopologyVersion{processId=6493b153637504370b7534cf, counter=4}, lastWriteDate=Sun Jul 02 13:44:25 IST 2023, lastUpdateTimeNanos=75560769939500}
+2023-07-02 13:44:26.658  INFO 18852 --- [cluster-rtt-ClusterId{value='64a131e195d4c95ad011e2c5', description='null'}-ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:12, serverValue:341774}] to ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017
+2023-07-02 13:44:26.662  INFO 18852 --- [cluster-ClusterId{value='64a131e195d4c95ad011e2c5', description='null'}-ac-uy0ozxy-shard-00-02.ytsaux4.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:7, serverValue:329922}] to ac-uy0ozxy-shard-00-02.ytsaux4.mongodb.net:27017
+2023-07-02 13:44:26.663  INFO 18852 --- [cluster-ClusterId{value='64a131e195d4c95ad011e2c5', description='null'}-ac-uy0ozxy-shard-00-02.ytsaux4.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-uy0ozxy-shard-00-02.ytsaux4.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=501347000, setName='atlas-dbsduu-shard-0', canonicalAddress=ac-uy0ozxy-shard-00-02.ytsaux4.mongodb.net:27017, hosts=[ac-uy0ozxy-shard-00-00.ytsaux4.mongodb.net:27017, ac-uy0ozxy-shard-00-02.ytsaux4.mongodb.net:27017, ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017], passives=[], arbiters=[], primary='ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=7, topologyVersion=TopologyVersion{processId=6493b36415beaf5d9c3c3666, counter=3}, lastWriteDate=Sun Jul 02 13:44:25 IST 2023, lastUpdateTimeNanos=75560778657800}
+2023-07-02 13:44:26.717  INFO 18852 --- [cluster-rtt-ClusterId{value='64a131e195d4c95ad011e2c5', description='null'}-ac-uy0ozxy-shard-00-02.ytsaux4.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:8, serverValue:329922}] to ac-uy0ozxy-shard-00-02.ytsaux4.mongodb.net:27017
+2023-07-02 13:44:26.721  INFO 18852 --- [cluster-rtt-ClusterId{value='64a131e195d4c95ad011e2c5', description='null'}-ac-uy0ozxy-shard-00-00.ytsaux4.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:10, serverValue:331612}] to ac-uy0ozxy-shard-00-00.ytsaux4.mongodb.net:27017
+2023-07-02 13:44:26.721  INFO 18852 --- [cluster-ClusterId{value='64a131e195d4c95ad011e2c5', description='null'}-ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:11, serverValue:341750}] to ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017
+2023-07-02 13:44:26.722  INFO 18852 --- [cluster-ClusterId{value='64a131e195d4c95ad011e2c5', description='null'}-ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=549777200, setName='atlas-dbsduu-shard-0', canonicalAddress=ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017, hosts=[ac-uy0ozxy-shard-00-00.ytsaux4.mongodb.net:27017, ac-uy0ozxy-shard-00-02.ytsaux4.mongodb.net:27017, ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017], passives=[], arbiters=[], primary='ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff00000000000000a6, setVersion=7, topologyVersion=TopologyVersion{processId=6493b264c40a4c3bbb842305, counter=6}, lastWriteDate=Sun Jul 02 13:44:25 IST 2023, lastUpdateTimeNanos=75560837134200}
+2023-07-02 13:44:26.723  INFO 18852 --- [cluster-ClusterId{value='64a131e195d4c95ad011e2c5', description='null'}-ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017] org.mongodb.driver.cluster               : Setting max election id to 7fffffff00000000000000a6 from replica set primary ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017
+2023-07-02 13:44:26.723  INFO 18852 --- [cluster-ClusterId{value='64a131e195d4c95ad011e2c5', description='null'}-ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017] org.mongodb.driver.cluster               : Setting max set version to 7 from replica set primary ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017
+2023-07-02 13:44:26.723  INFO 18852 --- [cluster-ClusterId{value='64a131e195d4c95ad011e2c5', description='null'}-ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017] org.mongodb.driver.cluster               : Discovered replica set primary ac-uy0ozxy-shard-00-01.ytsaux4.mongodb.net:27017
+2023-07-02 13:44:27.591  INFO 18852 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2023-07-02 13:44:27.647  INFO 18852 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5d10e2b6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@267309f7, org.springframework.security.web.context.SecurityContextPersistenceFilter@1c96bf1e, org.springframework.security.web.header.HeaderWriterFilter@25093079, org.springframework.web.filter.CorsFilter@46878216, org.springframework.security.web.authentication.logout.LogoutFilter@69e8f7a5, com.fse1.movieapp.security.jwt.AuthTokenFilter@2b69ff13, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7890324e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@14764fdd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7136ad9a, org.springframework.security.web.session.SessionManagementFilter@37fc7e3c, org.springframework.security.web.access.ExceptionTranslationFilter@78839c2e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7af2ee23]
+2023-07-02 13:44:28.215  INFO 18852 --- [main] c.f.m.s.services.MovieServiceTest        : Started MovieServiceTest in 4.591 seconds (JVM running for 22.978)

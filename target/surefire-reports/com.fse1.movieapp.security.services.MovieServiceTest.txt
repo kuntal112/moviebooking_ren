@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.fse1.movieapp.security.services.MovieServiceTest
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.797 s - in com.fse1.movieapp.security.services.MovieServiceTest
